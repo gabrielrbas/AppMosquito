@@ -17,7 +17,7 @@ function randomizaPosicao() {
 
     var mosquito = document.createElement("img")
     mosquito.src = "imagens/mosquito.png"
-    mosquito.className = randomizaTamanho()
+    mosquito.className = randomizaTamanho() + " " + randomizaLado()
     mosquito.style.left = posicaoX + "px"
     mosquito.style.top = posicaoY + "px"
     mosquito.style.position = "absolute"
@@ -35,4 +35,18 @@ function randomizaTamanho() {
         case 2:
             return "mosquito3"
     }
+}
+
+function randomizaLado() {
+
+    var mudaLado = Math.floor(Math.random() * 2)
+
+    switch (mudaLado) {
+        case 0:
+            return "ladoA"
+            
+        case 1:
+            return "ladoB"
+    }
+
 }
