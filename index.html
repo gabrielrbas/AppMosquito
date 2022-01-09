@@ -17,7 +17,9 @@
                 if (dificuldade === "") {
                     alert("Escolha um nível de dificuldade")
                     return false
-                }            
+                }   
+
+                window.location.href = "app.html?" + dificuldade
             }
 
         </script>
@@ -33,29 +35,30 @@
                         <img src="imagens/game.png">
                     </div>
                 </div>
-            
-                <div class="row">
-                    <div class="col">
-                        <div class="d-flex justify-content-center">
-                            <div class="mb-2">
-                                <select class="form-control" id="dificuldade">
-                                    <option value="">Selecione a dificuldade</option>
-                                    <option value="facil">Fácil</option>
-                                    <option value="normal">Normal</option>
-                                    <option value="dificil">Difícil</option>
-                                </select>
-                            </div>
+            </div>
+        
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <div class="mb-2">
+                            <select class="form-control" id="dificuldade">
+                                <option value="">Selecione a dificuldade</option>
+                                <option value="facil">Fácil</option>
+                                <option value="normal">Normal</option>
+                                <option value="dificil">Difícil</option>
+                            </select>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="row">
-                    <div class="col">
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-danger btn-lg" onclick="iniciaJogo()">Iniciar Jogo</button>
-                        </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-danger btn-lg" onclick="iniciaJogo()">Iniciar Jogo</button>
                     </div>
                 </div>
+            </div>
         </div>
         
     </body>

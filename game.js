@@ -2,6 +2,23 @@ var altura = 0
 var largura = 0
 var vidas = 1
 var tempo = 15
+var criaMosquitoTempo = 0
+
+var dificuldade = window.location.search
+dificuldade = dificuldade.replace("?", "")
+
+switch (dificuldade) {
+    case "normal":
+        criaMosquitoTempo = 1000
+        break
+
+    case "dificil":
+        criaMosquitoTempo = 750
+        break
+        
+    default:
+        criaMosquitoTempo = 1500
+}
 
 function alteraDimensionamento() {
     altura = window.innerHeight
