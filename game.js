@@ -1,6 +1,7 @@
 var altura = 0
 var largura = 0
-vidas = 1
+var vidas = 1
+var tempo = 15
 
 function alteraDimensionamento() {
     altura = window.innerHeight
@@ -8,6 +9,20 @@ function alteraDimensionamento() {
 }
 
 alteraDimensionamento()
+
+var cronometro = setInterval(() => {
+    tempo--
+    
+    if (tempo < 0) {
+        clearInterval(cronometro)
+        clearInterval(criaMosquito)
+    }
+    else {
+        document.getElementById("cronometro").innerHTML = tempo        
+    }
+
+}, 1000);
+
 
 function randomizaPosicao() {
     
